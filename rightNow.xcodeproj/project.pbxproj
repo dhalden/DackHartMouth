@@ -16,7 +16,8 @@
 		C57820CE1D9721D100BCD965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57820CC1D9721D100BCD965 /* LaunchScreen.storyboard */; };
 		C57820D91D9721D100BCD965 /* rightNowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57820D81D9721D100BCD965 /* rightNowTests.swift */; };
 		C57820E41D9721D100BCD965 /* rightNowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57820E31D9721D100BCD965 /* rightNowUITests.swift */; };
-		C57820F21D972AEE00BCD965 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = C57820F11D972AEE00BCD965 /* GoogleService-Info (1).plist */; };
+		C57820F41D972D5900BCD965 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C57820F31D972D5900BCD965 /* CoreGraphics.framework */; };
+		C57820F61D972E8300BCD965 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C57820F51D972E8300BCD965 /* GoogleService-Info.plist */; };
 		CBA35FD1295E89029B07F22A /* Pods_rightNowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FC098D8BA8C5A9CE4BF3BE /* Pods_rightNowUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +59,8 @@
 		C57820DF1D9721D100BCD965 /* rightNowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rightNowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57820E31D9721D100BCD965 /* rightNowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rightNowUITests.swift; sourceTree = "<group>"; };
 		C57820E51D9721D100BCD965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C57820F11D972AEE00BCD965 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		C57820F31D972D5900BCD965 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C57820F51D972E8300BCD965 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F2EC8C6FEE90CF1A65C888D9 /* Pods-rightNowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rightNowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rightNowUITests/Pods-rightNowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FCCADB20E04AA53A4A057C2C /* Pods-rightNowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rightNowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rightNowTests/Pods-rightNowTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C57820F41D972D5900BCD965 /* CoreGraphics.framework in Frameworks */,
 				3C850E2F45A109793BD104FE /* Pods_rightNow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +110,7 @@
 		4EED4D4CF0130682E3F74471 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C57820F31D972D5900BCD965 /* CoreGraphics.framework */,
 				B4110E315EEA48DD9BD3D7E4 /* Pods_rightNow.framework */,
 				88D1EA21CD311FE23A5052CA /* Pods_rightNowTests.framework */,
 				07FC098D8BA8C5A9CE4BF3BE /* Pods_rightNowUITests.framework */,
@@ -145,7 +149,7 @@
 				C57820CA1D9721D100BCD965 /* Assets.xcassets */,
 				C57820CC1D9721D100BCD965 /* LaunchScreen.storyboard */,
 				C57820CF1D9721D100BCD965 /* Info.plist */,
-				C57820F11D972AEE00BCD965 /* GoogleService-Info (1).plist */,
+				C57820F51D972E8300BCD965 /* GoogleService-Info.plist */,
 			);
 			path = rightNow;
 			sourceTree = "<group>";
@@ -286,8 +290,8 @@
 			files = (
 				C57820CE1D9721D100BCD965 /* LaunchScreen.storyboard in Resources */,
 				C57820CB1D9721D100BCD965 /* Assets.xcassets in Resources */,
+				C57820F61D972E8300BCD965 /* GoogleService-Info.plist in Resources */,
 				C57820C91D9721D100BCD965 /* Main.storyboard in Resources */,
-				C57820F21D972AEE00BCD965 /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
