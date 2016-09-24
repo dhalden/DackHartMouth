@@ -8,6 +8,7 @@ target 'rightNow' do
   # Pods for rightNow
 
     pod 'GoogleMaps'
+    pod 'GooglePlaces'
     pod 'Firebase'
 
 
