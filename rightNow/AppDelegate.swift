@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        GMSServices.provideAPIKey("AIzaSyA0xy3znV3sUM6sQKJqOkXtT63uEZynRE0")
+        GMSServices.provideAPIKey("AIzaSyDQzX44h1lhpAZ0ZUM6kUwSEnysiCv9Dg0")
         FIRApp.configure()
         
         return true
