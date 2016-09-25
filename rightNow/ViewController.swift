@@ -8,53 +8,48 @@
 
 import UIKit
 import GoogleMaps
-import MapKit
-import CoreLocation
+import GoogleMapsCore
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
-    let locationManager = CLLocationManager()
 
+    @IBOutlet var mview: GMSMapView!
+    let locationManager = CLLocationManager()
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.locationManager.requestAlwaysAuthorization()
         self.locationManager.requestWhenInUseAuthorization()
-        
-        // Ask for Authorisation from the User.
-        self.locationManager.requestAlwaysAuthorization()
-        
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-    }
-    
-    @IBOutlet var mainview: UIView!
-    @IBOutlet weak var mview: GMSMapView!
-    func locationManager(_ manager:CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        let camera = GMSCameraPosition.camera(withLatitude: locValue.latitude, longitude:locValue.longitude, zoom:6)
         
+        let camera = GMSCameraPosition.camera(withLatitude: 0,
+                                                          longitude:0, zoom:0)
         let rect = CGRect(x: 0, y: 0, width: 0, height: 0)
         let mapView = GMSMapView.map(withFrame: rect, camera:camera)
         mapView.isMyLocationEnabled = true
-//        let marker = GMSMarker()
-//        marker.position = camera.target
-//        marker.snippet = "Hello World"
-//        marker.appearAnimation = kGMSMarkerAnimationPop
-//        marker.map = mapView
-        super.view = mapView
-
+        if(mapView.isMyLocationEnabled) {
+            self.mview = mapView
+        } else {
+            self.mview = mapView
+        }
+        // Do any additional setup after loading the view, typically from a nib.
     }
     
+    
+    func locationManager(_ manager:CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        self.mview.isMyLocationEnabled = true
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-}
 
+}
 
