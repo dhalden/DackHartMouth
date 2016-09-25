@@ -40,12 +40,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let rect = CGRect(x: 0, y: 0, width: 0, height: 0)
         let mapView = GMSMapView.map(withFrame: rect, camera:camera)
-        
-        let marker = GMSMarker()
-        marker.position = camera.target
-        marker.snippet = "Hello World"
-        marker.appearAnimation = kGMSMarkerAnimationPop
-        marker.map = mapView
+        mapView.isMyLocationEnabled = true
+//        let marker = GMSMarker()
+//        marker.position = camera.target
+//        marker.snippet = "Hello World"
+//        marker.appearAnimation = kGMSMarkerAnimationPop
+//        marker.map = mapView
         super.view = mapView
 
     }
